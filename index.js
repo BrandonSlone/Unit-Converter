@@ -6,11 +6,29 @@ const volumeConversion = document.getElementById("volume")
 const massConversion = document.getElementById("mass")
 
 
+
+
+
+measurementInput.addEventListener('keydown', function(){
+    if (measurementInput.value == ""){
+        test()
+    }
+    
+    
+})
+
+function test(){
+    if (measurementInput.value == ""){
+        $(".results").text("")
+    }    
+}
+
 measurementInput.addEventListener("keypress", function(event){
 
     if (event.key === "Enter"){
        convert()
     }
+    
   })
 
 
@@ -38,15 +56,11 @@ measurementInput.addEventListener('input', function(event){
     
 })
 
-function clearResults(){
 
-   $("div").hide()
 
-}
 
-measurementInput.addEventListener('keydown', function(){
-    if (measurementInput.value == null){ $(".results").innerText = ""}
-})
+
+
 
 
 
